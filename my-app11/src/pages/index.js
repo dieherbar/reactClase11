@@ -24,7 +24,8 @@ export default function Home() {
 
         <div>
           <h2>youtube iframe en el idex.js</h2>
-          <iframe width='560' height='315' src="https://www.youtube.com/watch?v=d4jT-TO-C_U&t=124s">
+          <iframe width='560' height='315' src='https://www.youtube.com/watch?v=mWyak0g5LLI'>
+          // {/* src="https://www.youtube.com/watch?v=d4jT-TO-C_U&t=124s"> */}
           </iframe>
         </div>
         <div>
@@ -36,7 +37,9 @@ export default function Home() {
 
         </div>
 
-        <VideoFile ancho="320" alto="240" fuente="../assets/dolbycanyon.mp4" type="video/mp4"></VideoFile>
+        <VideoFile ancho="320" alto="240" fuente="../assets/dolbycanyon.mp4" type="video/mp4">
+        <p>texto en el medio del video tag</p>
+        </VideoFile>
 
       </main>
     </>
