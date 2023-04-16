@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Saludo from '@/componentes/saludo'
 import VideoLink from '@/componentes/VideoLink'
 import VideoFile from '@/componentes/VideoFile'
+import Audio from '@/componentes/Audio'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,27 +20,37 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Saludo texto="Cacho" edad="17">Texto en el medio del componente de bloque saludo</Saludo>
-        <br></br><hr></hr>
-        <VideoLink width="320" height="240" fuente="https://youtu.be/d4jT-TO-C_U?t=124"></VideoLink>
+        <div className={styles.separador}></div>
+        <hr></hr>
+        
+        <VideoLink width="320" height="240" fuente="https://www.w3schools.com/tags/movie.mp4">
+
+        </VideoLink>
+        {/* //</main>fuente="https://youtu.be/d4jT-TO-C_U?t=124"></VideoLink> */}
+        <div className={styles.separador}></div>
 
         <div>
           <h2>youtube iframe en el idex.js</h2>
-          <iframe width='560' height='315' src='https://www.youtube.com/watch?v=mWyak0g5LLI'>
+          <iframe controls src='https://www.youtube.com/watch?v=mWyak0g5LLI'>
           // {/* src="https://www.youtube.com/watch?v=d4jT-TO-C_U&t=124s"> */}
           </iframe>
         </div>
+        <div className={styles.separador}></div>
         <div>
           <h2>video en el index.js</h2>
-          <video width="320" height="240" controls>
+          <video width="320" height="240"  controls  >
             <source src="../assets/dolbycanyon.mp4" type="video/mp4"></source>
             Your browser does not support the video tag.
           </video>
 
         </div>
-
+        <div className={styles.separador}></div>
         <VideoFile ancho="320" alto="240" fuente="../assets/dolbycanyon.mp4" type="video/mp4">
-        <p>texto en el medio del video tag</p>
+        <p>texto en el medio del video tag -- https://www.w3schools.com/html/horse.mp3</p>
         </VideoFile>
+        <div className={styles.separador}></div>
+
+        <Audio fuente="https://www.w3schools.com/html/horse.mp3"></Audio>
 
       </main>
     </>
