@@ -6,6 +6,7 @@ import Saludo from '@/componentes/saludo'
 import VideoLink from '@/componentes/VideoLink'
 import VideoFile from '@/componentes/VideoFile'
 import Audio from '@/componentes/Audio'
+import Card from '@/componentes/Card'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,39 +20,64 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Saludo texto="Cacho" edad="17">Texto en el medio del componente de bloque saludo</Saludo>
+        {/* <Saludo texto="Cacho" edad="17">Texto en el medio del componente de bloque saludo</Saludo> */}
+        <h1>Bienvenido al ejercicio de la clase 11</h1>
+
         <div className={styles.separador}></div>
         <hr></hr>
-        
-        <VideoLink width="320" height="240" fuente="https://www.w3schools.com/tags/movie.mp4">
-
-        </VideoLink>
+        <div className={styles.contenedor}>
+        <VideoLink width="320" height="240" fuente="https://www.w3schools.com/tags/movie.mp4"></VideoLink>
+        <VideoLink width="320" height="240" fuente="https://www.w3schools.com/html/mov_bbb.mp4"></VideoLink>
+        <VideoLink width="320" height="240" fuente="https://www.w3schools.com/tags/movie.mp4"></VideoLink>
+        <VideoLink width="320" height="240" fuente="https://www.w3schools.com/html/mov_bbb.mp4"></VideoLink>
         {/* //</main>fuente="https://youtu.be/d4jT-TO-C_U?t=124"></VideoLink> */}
-        <div className={styles.separador}></div>
-
-        <div>
-          <h2>youtube iframe en el idex.js</h2>
-          <iframe controls src='https://www.youtube.com/watch?v=mWyak0g5LLI'>
-          // {/* src="https://www.youtube.com/watch?v=d4jT-TO-C_U&t=124s"> */}
-          </iframe>
         </div>
         <div className={styles.separador}></div>
-        <div>
+
+        <div className={styles.contenedor}>
+          <div className={styles.tarjeta}>
+          <Card image="https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=1.00xw:0.753xh;0,0.153xh&resize=400:*" width="400" height="200"></Card>
+          </div>
+          <div className={styles.tarjeta}>
+          <Card image="https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=1.00xw:0.753xh;0,0.153xh&resize=400:*" width="400" height="200"></Card>
+          </div>
+          <div className={styles.tarjeta}>
+          <Card image="https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=1.00xw:0.753xh;0,0.153xh&resize=400:*" width="400" height="200">
+           </Card>
+           </div>
+        </div>
+
+
+
+       {/*  <div>
+          <h2>youtube iframe en el idex.js</h2>
+          <iframe controls src='https://www.youtube.com/watch?v=mWyak0g5LLI'>
+          //  src="https://www.youtube.com/watch?v=d4jT-TO-C_U&t=124s"> 
+          </iframe>
+        </div> */}
+
+        <div className={styles.separador}></div>
+
+       {/*  <div>
           <h2>video en el index.js</h2>
           <video width="320" height="240"  controls  >
             <source src="../assets/dolbycanyon.mp4" type="video/mp4"></source>
             Your browser does not support the video tag.
           </video>
+        </div> */}
 
-        </div>
-        <div className={styles.separador}></div>
+        {/* <div className={styles.separador}></div>
         <VideoFile ancho="320" alto="240" fuente="../assets/dolbycanyon.mp4" type="video/mp4">
         <p>texto en el medio del video tag -- https://www.w3schools.com/html/horse.mp3</p>
         </VideoFile>
-        <div className={styles.separador}></div>
+        <div className={styles.separador}></div> */}
 
+<div className={styles.contenedor}>
         <Audio fuente="https://www.w3schools.com/html/horse.mp3"></Audio>
-
+        <Audio fuente="https://www.w3schools.com/html/horse.mp3"></Audio>
+        <Audio fuente="https://www.w3schools.com/html/horse.mp3"></Audio>
+        <Audio fuente="https://www.w3schools.com/html/horse.mp3"></Audio>
+        </div>
       </main>
     </>
   )
